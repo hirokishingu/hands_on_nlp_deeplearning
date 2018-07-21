@@ -30,7 +30,7 @@ class TwoLayerNet:
 
     def forward(self, x, t):
         score = self.predict(x)
-        loss = sefl.loss_layer.forward(score, t)
+        loss = self.loss_layer.forward(score, t)
         return loss
 
     def backward(self, dout=1):

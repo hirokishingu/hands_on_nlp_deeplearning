@@ -2,8 +2,10 @@ import sys
 sys.path.append('..')
 from common.layers import *
 
-class SDG:
-    def __init__(self, params, grads):
+class SGD:
+    def __init__(self, lr=0.01):
+        self.lr = lr
+
+    def update(self, params, grads):
         for i in range(len(params)):
-            params[i] -= self.lr = * grads[i]
-            
+            params[i] -= self.lr * grads[i]

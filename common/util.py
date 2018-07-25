@@ -21,7 +21,7 @@ def preprocess(text):
 
     return corpus, word_to_id, id_to_word
 
-def create_to_matrix(corpus, vocab_size, window_size=1):
+def create_co_matrix(corpus, vocab_size, window_size=1):
     corpus_size = len(corpus)
     co_matrix = np.zeros((vocab_size, vocab_size), dtype=np.int32)
 

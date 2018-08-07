@@ -30,3 +30,13 @@ class SimpleCBOW:
         score = self.out_layer.forward(h)
         loss = self.loss_layer.forward(score, target)
         return loss
+
+    def backward(self, dout=1):
+        ds = self.loss_layer.backward(dout)
+        da = self.out_layer.backward(ds)
+        da *= 0.5
+        self.in_layer1.backward(da)
+        self.in_layer0.backward(da)
+        return None
+
+    

@@ -9,3 +9,5 @@ window_size = 1
 hidden_size = 5
 batch_size = 3
 max_epoch = 1000
+
+text = 'You say goodbye and I say hello.'

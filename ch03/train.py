@@ -12,3 +12,5 @@ max_epoch = 1000
 
 text = 'You say goodbye and I say hello.'
 corpus, word_to_id, id_to_word = preprocess(text)
+
+vocab_size = len(word_to_id)

@@ -19,3 +19,4 @@ target = convert_one_hot(contexts, vocab_size)
 contexts = convert_one_hot(contexts, vocab_size)
 
 model = SimpleCBOW(vocab_size, hidden_size)
+optimizer = Adam()

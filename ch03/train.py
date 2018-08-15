@@ -21,3 +21,5 @@ contexts = convert_one_hot(contexts, vocab_size)
 model = SimpleCBOW(vocab_size, hidden_size)
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
+
+trainer.fit(contexts, target, max_epoch, batch_size)

@@ -23,3 +23,4 @@ optimizer = Adam()
 trainer = Trainer(model, optimizer)
 
 trainer.fit(contexts, target, max_epoch, batch_size)
+trainer.plot()

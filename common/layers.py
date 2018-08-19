@@ -83,3 +83,9 @@ class SoftmaxWithLoss:
         dx = dx / batch_size
 
         return dx
+
+class Embedding:
+    def __init__(self, W):
+        self.params = [W]
+        self.grads = [np.zeros_like(W)]
+        self.idx = None

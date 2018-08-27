@@ -18,3 +18,5 @@ class EmbeddingDot:
 
         self.cache = (h, target_W)
         return out
+
+    def backwawrd(self, dout):

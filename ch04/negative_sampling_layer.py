@@ -20,3 +20,4 @@ class EmbeddingDot:
         return out
 
     def backwawrd(self, dout):
+        h, target_W = self.cache

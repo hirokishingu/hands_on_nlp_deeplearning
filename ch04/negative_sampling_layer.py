@@ -22,3 +22,9 @@ class EmbeddingDot:
     def backwawrd(self, dout):
         h, target_W = self.cache
         dout = dout.reshape(dout.shape[0], 1)
+
+        dtarget_W = dout * h
+        self.embed.backawrd(dtarget_W)
+        dh = dout * target_W
+        return dh
+

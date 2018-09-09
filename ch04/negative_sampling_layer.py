@@ -33,3 +33,4 @@ class NegativeSamplingLoss:
         self.sample_size = sample_size
         self.sampler = UnigramSampler(corpus, power, sample_size)
         self.loss_layers = [SigmoidWithLoss() for _ in range(sample_size + 1)]
+        self.embed_dot_layers = [EmbeddingDot(W) for _ in range(sample_size + 1)]
